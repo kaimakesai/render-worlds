@@ -1,0 +1,154 @@
+{
+ "version": "0.1",
+ "made_by": "kai makes, synthesized from scratch with kit/tools/make_sfx.py and make_music.py (no samples). Free to use and share.",
+ "rules": "rules.md 35-39: 3 to 8 effects per short, only on big moments; accent in the first second; effects 6-12 dB over the music, under the voice.",
+ "items": [
+  {
+   "file": "SFX/boom/boom-short.wav",
+   "kind": "boom",
+   "use_when": "a small impact or a hard cut on a fact"
+  },
+  {
+   "file": "SFX/boom/boom-deep.wav",
+   "kind": "boom",
+   "use_when": "a crash, a fall, a big number lands"
+  },
+  {
+   "file": "SFX/boom/boom-reveal.wav",
+   "kind": "boom",
+   "use_when": "the twist or the hook reveal; pair with a riser before it"
+  },
+  {
+   "file": "SFX/whoosh/whoosh-whip.wav",
+   "kind": "whoosh",
+   "use_when": "a whip move between places (8-12 frames)"
+  },
+  {
+   "file": "SFX/whoosh/whoosh-medium.wav",
+   "kind": "whoosh",
+   "use_when": "an 18-frame glide or an object flying in"
+  },
+  {
+   "file": "SFX/whoosh/whoosh-long.wav",
+   "kind": "whoosh",
+   "use_when": "a fly-up to an aerial or a long camera move"
+  },
+  {
+   "file": "SFX/whoosh/whoosh-reverse.wav",
+   "kind": "whoosh",
+   "use_when": "sucking into a cutaway or an iris into a head"
+  },
+  {
+   "file": "SFX/ding/ding-idea.wav",
+   "kind": "ding",
+   "use_when": "an idea, a lightbulb, a number appears"
+  },
+  {
+   "file": "SFX/ding/ding-soft.wav",
+   "kind": "ding",
+   "use_when": "a calm reveal, a sign or a date"
+  },
+  {
+   "file": "SFX/click/click-tick.wav",
+   "kind": "click",
+   "use_when": "a button, a switch, a calendar page"
+  },
+  {
+   "file": "SFX/click/pop-small.wav",
+   "kind": "pop",
+   "use_when": "a prop or character pops into the frame"
+  },
+  {
+   "file": "SFX/click/pop-cork.wav",
+   "kind": "pop",
+   "use_when": "something comes out or is let go (a ball from a mouth)"
+  },
+  {
+   "file": "SFX/riser/riser-short.wav",
+   "kind": "riser",
+   "use_when": "1.2 s before a reveal; ends on the reveal frame"
+  },
+  {
+   "file": "SFX/riser/riser-long.wav",
+   "kind": "riser",
+   "use_when": "the build before the twist; ends on the twist word"
+  },
+  {
+   "file": "SFX/riser/reverse-cymbal.wav",
+   "kind": "riser",
+   "use_when": "into a flashback or a palette change"
+  },
+  {
+   "file": "SFX/thud/thud-body.wav",
+   "kind": "thud",
+   "use_when": "a body or a heavy object hits the ground"
+  },
+  {
+   "file": "SFX/thud/thud-step.wav",
+   "kind": "thud",
+   "use_when": "one heavy footstep or a door"
+  }
+ ],
+ "music": [
+  {
+   "file": "Music/curious-a-minor.wav",
+   "bpm": 100,
+   "loop_seconds": 38.4,
+   "lufs": -18.0,
+   "lead": "music_box",
+   "name": "curious-a-minor",
+   "use_when": "default bed: the setup and most of the story",
+   "seamless_loop": true
+  },
+  {
+   "file": "Music/mystery-d-minor.wav",
+   "bpm": 90,
+   "loop_seconds": 42.667,
+   "lufs": -18.0,
+   "lead": "celesta",
+   "name": "mystery-d-minor",
+   "use_when": "the 'You see...' explanation, slower beats",
+   "seamless_loop": true
+  },
+  {
+   "file": "Music/playful-c-lydian.wav",
+   "bpm": 108,
+   "loop_seconds": 35.556,
+   "lufs": -18.0,
+   "lead": "music_box",
+   "name": "playful-c-lydian",
+   "use_when": "funny or light moments, character jokes",
+   "seamless_loop": true
+  },
+  {
+   "file": "Music/tension-e-minor.wav",
+   "bpm": 100,
+   "loop_seconds": 38.4,
+   "lufs": -18.0,
+   "lead": "glock",
+   "name": "tension-e-minor",
+   "use_when": "the build before the twist",
+   "seamless_loop": true
+  },
+  {
+   "file": "Music/wonder-f-major.wav",
+   "bpm": 96,
+   "loop_seconds": 40.0,
+   "lufs": -18.0,
+   "lead": "music_box",
+   "name": "wonder-f-major",
+   "use_when": "scale shots, discoveries, happy endings",
+   "seamless_loop": true
+  },
+  {
+   "file": "Music/dark-c-minor.wav",
+   "bpm": 84,
+   "loop_seconds": 45.714,
+   "lufs": -18.0,
+   "lead": "celesta",
+   "name": "dark-c-minor",
+   "use_when": "danger, crime, disaster (weakest match, use rarely)",
+   "seamless_loop": true
+  }
+ ]
+}

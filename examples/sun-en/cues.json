@@ -1,0 +1,18 @@
+{ "duck_db": -16,
+  "cues": [
+  {"t": 0.0,              "file": "D:/sckool/library/assets/sfx/pack1/wind.mp3",            "gain": -12, "max": 3.0, "fade": 0.8, "note": "cold night"},
+  {"t": 0.0,              "file": "LIB:whoosh/whoosh-long.wav",  "gain": -4, "align": "attack", "max": 1.2, "fade": 0.3, "note": "fly-in"},
+  {"t": "cut:2",          "file": "LIB:whoosh/whoosh-whip.wav",  "gain": -9, "align": "peak", "max": 0.8},
+  {"t": "cut:3",          "file": "LIB:whoosh/whoosh-medium.wav","gain": -11, "align": "peak", "max": 0.8},
+  {"t": "cut:4",          "file": "D:/sckool/library/assets/sfx/pack1/crowd.mp3", "off": 1.0,  "gain": -15, "max": 1.6, "fade": 0.5, "note": "crowd murmur"},
+  {"t": "cut:5",          "file": "LIB:whoosh/whoosh-reverse.wav","gain": -11, "align": "peak", "max": 0.8},
+  {"t": "word:three",     "file": "LIB:click/click-tick.wav",    "gain": -4, "max": 0.4},
+  {"t": "word:two",       "file": "LIB:click/click-tick.wav",    "gain": -4, "max": 0.4},
+  {"t": "word:one",       "file": "D:/sckool/library/assets/sfx/pack1/click special.mp3",       "gain": -5, "max": 0.4},
+  {"t": "word:one",       "file": "LIB:riser/riser-short.wav",   "gain": -10, "max": 0.9, "fade": 0.2, "note": "build to sunrise"},
+  {"t": "word:sun#2",     "file": "D:/sckool/library/assets/sfx/pack1/dark drone.mp3",          "gain": -9, "max": 2.6, "fade": 0.6, "note": "nothing happens"},
+  {"t": "cut:10",         "file": "LIB:boom/boom-deep.wav",      "gain": -9, "max": 1.4, "fade": 0.4, "note": "something rises"},
+  {"t": "cut:10+0.1",     "file": "D:/sckool/library/assets/sfx/pack1/mysterious drone.mp3",    "gain": -10, "max": 3.0, "fade": 1.0},
+  {"t": "word:eyes+0.45",  "file": "LIB:boom/boom-reveal.wav",    "gain": -3, "align": "peak", "max": 2.0, "fade": 0.8, "note": "thousands of eyes"},
+  {"t": "end-1.2",        "file": "D:/sckool/library/assets/sfx/pack1/suckback riser 1.mp3",    "gain": -12, "max": 1.2, "fade": 0.3}
+  ] }
