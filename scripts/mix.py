@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np, soundfile as sf
 from scipy.signal import resample_poly, butter, lfilter
 
-LIB = os.environ.get('RW_SFX_LIB', os.environ.get('MAVEN_SFX_LIB', str(Path(__file__).resolve().parent.parent / 'sfx') + '/'))
+LIB = os.environ.get('RW_SFX_LIB', str(Path(__file__).resolve().parent.parent / 'sfx') + '/')
 SR = 48000
 proj = Path(sys.argv[1]).resolve(); res = proj / 'result'; res.mkdir(exist_ok=True)
 C = json.loads((proj / 'cues.json').read_text(encoding='utf-8')) if (proj / 'cues.json').exists() else {'cues': []}
@@ -56,12 +56,16 @@ for c in C.get('cues', []):
     f = path(c['file'])
     if not os.path.exists(f): print(f'WARNING: sound not found, skipped: {f}'); continue
     used[f] = used.get(f, 0) + 1
-    a = load(f)[int(c.get('off', 0) * SR):]
+    a = load(f); o = int(c.get('off', 0) * SR)
+    if o >= len(a) - int(.02 * SR): print(f'WARNING: "off" {c.get("off")} s is past the end of {os.path.basename(f)} ({len(a) / SR:.2f} s), using 0'); o = 0
+    a = a[o:]
+    if len(a) < int(.02 * SR) or np.abs(a).max() == 0: print(f'WARNING: sound is empty, skipped: {f}'); continue
     e, n = env(a); att = int(np.argmax(e > e.max() * .1)) * n; pk = int(np.argmax(e)) * n
     s0 = att if c.get('align', 'attack') == 'attack' else pk
     cut = max(0, att - int(.01 * SR)); a = a[cut:]; s0 -= cut
     a = a[:int(c.get('max', 2.0) * SR) + s0].copy(); k = int(c.get('fade', .2) * SR)
-    if k: a[-k:] *= np.linspace(1, 0, min(k, len(a)))[:, None]
+    k = min(k, len(a))
+    if k: a[-k:] *= np.linspace(1, 0, k)[:, None]
     act = a[np.abs(a).max(1) > np.abs(a).max() * .05]; r = np.sqrt(np.mean(act ** 2)) + 1e-9
     a = a * (10 ** (-20 / 20) / r) * 10 ** (c.get('gain', -6) / 20)
     st = int(when(c['t']) * SR) - s0

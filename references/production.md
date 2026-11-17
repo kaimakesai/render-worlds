@@ -25,16 +25,19 @@
 - Check nothing sits between the camera and the subject: candles, balloons, trees, tower roofs.
 
 ## Sound recipe (cues.json)
-| moment | sound (shared library `LIB:` or Mixkit) | level |
+The skill ships 17 sounds made from scratch in `sfx/` (use them as `LIB:<folder>/<file>`). You can also point `file` at any sound on your own PC.
+
+| moment | bundled sound | level |
 |---|---|---|
-| fly-in at 0 s | transitions/whoosh_air | -3 |
-| whip cuts (about every other cut) | whoosh_fast, whoosh_arrow, whoosh_sparkle, whoosh_cinematic (rotate them, no sample more than twice) | -7 to -13, `align: peak` on the cut |
-| magic | magic/sparkle, glitter, fairy_whoosh, sparkle_wand, poof | -5 to -12 |
-| reaction punch-in | impacts/bass_hit or impacts/horror_hit | -12 |
-| reveal or twist sting | impacts/cinematic_impact, or thunder (Mixkit 1294 from 3.0 s) | -3 to -6, after the last word |
-| creatures | Mixkit 309 dragon roar, animals/beast_roar, animals/wings_flap | -2 to -12 |
-| places | nature/birds_forest, animals/rooster, Mixkit 580 school bell, Mixkit 722 fanfare | -7 to -14 |
-| doors | ui/door_creak_open, ui/key_in_lock | -9 |
+| fly-in at 0 s | `whoosh/whoosh-long` | -3 |
+| whip cuts (about every other cut) | `whoosh/whoosh-whip`, `whoosh-medium`, `whoosh-reverse` (rotate them) | -7 to -13, `align: peak` on the cut |
+| magic, a wish, an idea | `ding/ding-soft`, `ding/ding-idea`, `riser/riser-short` | -5 to -12 |
+| a pop, a reveal of an object | `click/pop-cork`, `click/pop-small` | -5 to -8 |
+| countdown numbers, a clock | `click/click-tick` | -4 |
+| reaction punch-in | `boom/boom-short` | -12 |
+| reveal or twist sting | `boom/boom-reveal`, `boom/boom-deep` | -3 to -9, after the last word |
+| build-up before a twist | `riser/riser-long`, `riser/reverse-cymbal` | -10 to -12 |
+| steps, a fall, a hit | `thud/thud-step`, `thud/thud-body` | -6 to -10 |
 
 - **Cue times**:
   - A number of seconds.
@@ -44,7 +47,7 @@
   - `end-1.0`: one second before the end.
 - **Ducking**: `duck_db` -16 keeps effects about 16 dB under the voice. mix.py prints the voice-vs-everything-else number; aim for the worst window at 9 dB or more and the median at 18 dB or more.
 - **Music**: the house rule is no music on narrated reels, because the user adds it in-app. When asked for it, add `"music": {"file": …, "lufs": -34}` to cues.json. The reference used a constant bright pop bed with pizzicato and vocal chops.
-- Never synthesize effects. Download missing sounds from Mixkit, using `https://assets.mixkit.co/active_storage/sfx/<id>/<id>-preview.mp3` (ids appear on the mixkit.co category pages), then pick between candidates with earshot `rank`.
+- Need a sound the library does not have? Use a free sound site whose licence allows use in videos, save it in the project's `sfx/` folder and point the cue at it.
 
 ## Checks before delivering
 1. `build.py <p> shots` gives one still per shot. Look for: is the subject readable, is anything blocking it, is the caption over the eyes.

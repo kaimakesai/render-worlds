@@ -1,32 +1,17 @@
-# The Render Worlds style: frame-by-frame analysis of the reference
+# The Render Worlds style
 
-Source: https://www.youtube.com/watch?v=34N0adyKxvY (Braids Reacts, uploaded 2026-10-29, about 2.4M views, 19:18 long).
-Local copy: `D:/reels/whatif-demo/refs/ref3/ref3.mp4` (1920x1080 at 60 fps). The folder also has the auto captions (`captions.txt`), the contact sheets (`sheets/`) and full-resolution stills (`hi/`).
-
-**What the file is.** A reaction channel re-uploaded vertical Shorts made by other creators ("All clips belong to their original creator"). Each 9:16 clip sits in the centre of a 16:9 frame (608x1080), with a blurred and zoomed copy filling the sides. So the real format is a **vertical Short of 1080x1920**, and the demo is built that way.
-
-## The 8 stories in the compilation
-| time | story | voice | length |
-|---|---|---|---|
-| 0:00 | Mystery cube: once a year a giant black box with portals lands in town; Ryan goes in to save his lost father | 3rd person | 2:52 |
-| 2:52 | Mr Tick plays hide-and-seek with the town every year | 1st person, horror | 2:32 |
-| 5:24 | On full-moon nights the Moon comes down and looks through windows | 1st person, horror | 2:38 |
-| 8:02 | The empire is ruled by a golden parrot that repeats the dead emperor's orders | 1st person, comedy | 2:11 |
-| 10:13 | Everyone has a "guide" voice in their head that is never wrong | 1st person, horror twist | 2:08 |
-| 12:21 | Married couples swap ages; then a kingdom where colours must never mix (different creator, different caption style) | 3rd/1st | 3:25 |
-| 15:46 | A magic pause remote; the boy accidentally pauses his best friend too | 3rd person, twist | 0:39 |
-| 16:25 | Every morning the sky's colour decides that day's power | 3rd person | 2:53 |
+What makes an "In this world…" Short read as this style: the story formula, pace and camera, the picture look, character shape, captions and sound. Every number below is the house setting of kai makes.
 
 ## The script formula (the same in every story)
 1. **Rule line first, word one:** "In this world, …" / "In this town, …" / "In my town, …". It states an impossible rule as plain fact.
 2. **Two or three quick examples of the rule** ("One year a box revealed a jungle filled with dinosaurs. Another contained a city made of gold…"). Each example gets its own shot.
 3. **Stakes and a deadline:** "Every box stays open for exactly 1 hour… anyone still inside is never seen again."
-4. **A personal hook:** a lost parent, a promise, a birthday ("He promised Ryan he'd bring him a piece for his birthday").
+4. **A personal hook:** a lost parent, a promise, a birthday ("He promised his son a gift for his birthday").
 5. **Inciting moment:** "Then, one morning…"
 6. **Discovery and escalation** through set pieces, with a short dialogue line in quotes ("Dad!", "Run!").
 7. **A warning or twist line:** "Don't trust the sky." / "We don't have a dog."
 8. **Countdown climax:** "20 seconds!" "10 seconds!" "5 seconds!"
-9. **Payoff that calls back the hook** ("Happy birthday, Ryan."), or a twist sting for the short ones ("Wait… he had accidentally paused both of them?").
+9. **Payoff that calls back the hook** ("Happy birthday, kid."), or a twist sting for the short ones ("Wait… he had accidentally paused both of them?").
 
 Language: short declarative sentences, simple words, lots of "enormous / gigantic / thousands / suddenly". Narration is fast: **3.75–4.4 words a second** (measured from captions, about 245 a minute), with no pauses between sentences.
 
@@ -79,7 +64,6 @@ Language: short declarative sentences, simple words, lots of "enormous / giganti
 - Bold rounded geometric sans (Poppins ExtraBold / Bold look), lowercase as spoken, with punctuation kept ("then,", "close,", "Dad!" in quotes).
 - **Pale-yellow fill (#fff59d-ish) with a thick black outline**, small (cap height about 2.3% of frame height), centred at **about 68% down the frame**.
 - There is no box and no animation beyond the swap. Emphasis words are sometimes in caps ("GOLDEN trees").
-- The 12:21 creator differs: two or three words, white with one key word coloured green, blue or red.
 
 ## Sound (measured with earshot on 0:00–0:30, and with ebur128 on the whole video)
 - **-13.8 LUFS integrated**, LRA 5.4 LU overall (2.0 LU on the first 30 s), true peak -0.9 dBTP. It is loud and flat, a compressed Shorts master.

@@ -21,7 +21,7 @@ import numpy as np, soundfile as sf
 from scipy.signal import resample_poly
 
 HERE = Path(__file__).resolve().parent
-env = lambda k, d: os.environ.get('RW_' + k, os.environ.get('MAVEN_' + k, d))
+env = lambda k, d: os.environ.get('RW_' + k, d)
 TOOLS = {
     'kokoro_py': env('KOKORO_PY', ''),
     'kokoro_say': env('KOKORO_SAY', ''),
@@ -50,6 +50,9 @@ def load(p):
 
 if '--timing-only' not in sys.argv:
     raw = vo / 'raw.wav'
+    if engine == 'kokoro' and not (TOOLS['kokoro_py'] and TOOLS['kokoro_say']):
+        print('[!] Kokoro is not set up (RW_KOKORO_PY / RW_KOKORO_SAY), using the free Edge voice instead')
+        engine = 'edge'; cfg.pop('voice', None)
     if engine == 'kokoro':
         (vo / '_lines.json').write_text(json.dumps([{'id': 'raw', 'text': text}]), encoding='utf-8')
         run([TOOLS['kokoro_py'], TOOLS['kokoro_say'], str(vo / '_lines.json'), str(vo), cfg.get('voice', 'am_liam'), str(cfg.get('speed', 1.18))])
