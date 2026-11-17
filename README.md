@@ -5,8 +5,11 @@ A free Claude skill that makes "In this world…" story Shorts in a blocky 3D st
 Made by **kai makes**.
 
 ## Install
+**Easiest:** open Claude Code and say: *"Install this skill: https://github.com/kaimakesai/render-worlds"*
+
+**By hand:**
 1. Install [Claude Code](https://claude.com/claude-code), Python 3.10+, Node.js 18+ and ffmpeg.
-2. Copy this folder to your skills folder:
+2. Download this repo (`git clone https://github.com/kaimakesai/render-worlds`) and put the folder in your skills folder:
    - Windows: `C:\Users\<you>\.claude\skills\render-worlds`
    - macOS / Linux: `~/.claude/skills/render-worlds`
 3. Run the setup once:
@@ -22,4 +25,7 @@ Made by **kai makes**.
 - `examples/`: `sun-en` and `dragons-en`
 - `references/`: style guide, script formula, 50 story ideas, kit API
 
-Read `SKILL.md` for the full workflow.
+Every prompt from the video is in [`PROMPTS.md`](PROMPTS.md). Read `SKILL.md` for the full workflow.
+
+## License
+Free to use for your own videos. Sound effects in `sfx/` are original and free to use.
