@@ -26,6 +26,3 @@ Made by **kai makes**.
 - `references/`: style guide, script formula, 50 story ideas, kit API
 
 Every prompt from the video is in [`PROMPTS.md`](PROMPTS.md). Read `SKILL.md` for the full workflow.
-
-## License
-Free to use for your own videos. Sound effects in `sfx/` are original and free to use.
