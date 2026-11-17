@@ -1,1 +1,1 @@
-{ "name": "maven-3d", "private": true, "type": "module", "dependencies": { "playwright": "1.64.1" } }
+{ "name": "render-worlds", "private": true, "type": "module", "dependencies": { "playwright": "1.64.1" } }
